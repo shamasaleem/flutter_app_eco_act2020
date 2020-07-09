@@ -35,180 +35,144 @@ class _ChateFeatureState extends State<ChateFeature> {
           height: 615.0,
           width: 350.0,
 
-        child: Stack(children: <Widget>[
-          Positioned(
-          bottom: 10, left: 10,
-          child: Row(
-            children: <Widget>[
-            Icon(Icons.send, size: 60.0,),
-          SizedBox(width: 5.0),
-          Column(
-            children: <Widget>[
-          Container(
-          child: Text('subject',
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          height: 75, width: 250,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius:BorderRadius.circular(15.0),
-            boxShadow: [
-              BoxShadow(
-                color:Colors.grey,
-                spreadRadius: 5,
-                blurRadius: 7,
-                offset:Offset (0,3),
-              )
-            ],
-          ),
-        ),
-        Divider(
-          height:0, thickness:15, color: Colors.black,
-        ),
-        Container(
-          child: Text('message',
-            style: TextStyle(
-              fontSize: 16,
-            ),
-          ),
-          height: 75, width: 250,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius:BorderRadius.circular(15.0),
-            boxShadow: [
-              BoxShadow(
-                color:Colors.grey,
-                spreadRadius: 5,
-                blurRadius: 7,
-                offset:Offset (0,3),
-              )
-            ],
-          ),
-        ),
-        Positioned(
-          bottom: 50, right: 10,
-          child: Row(
-            children: <Widget>[
-            Text('account name',
-            style: TextStyle(
-              fontSize: 16,
-            ),
-          ),
-          SizedBox(width: 5.0),
-          Container(
-            height: 125, width: 200,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius:BorderRadius.circular(15.0),
-              boxShadow: [
-                BoxShadow(
-                  color:Colors.grey,
-                  spreadRadius: 5,
-                  blurRadius: 7,
-                  offset:Offset (0,3),
-                )
-              ],
-            ),
-          ),
-          Positioned(bottom: 30, left: 10,
-            child: Row(
-              children: <Widget>[
-              Text('account name',
-              style: TextStyle(
-                fontSize: 16,
-              ),
-            ),
-            SizedBox(width: 5.0),
-            Container(
-              height: 125, width: 200,
-              decoration: BoxDecoration(
-                color: Colors.grey,
-                borderRadius:BorderRadius.circular(15.0),
-                boxShadow: [
-                  BoxShadow(
-                    color:Colors.grey,
-                    spreadRadius: 5,
-                    blurRadius: 7,
-                    offset:Offset (0,3),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Spacer(),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text('Account Name'),
+                      SizedBox(height: 10.0,),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                        width: 200.0,
+                        height: 50.0,
+                      )
+                    ],
                   )
                 ],
               ),
-            ),
-            Positioned(
-              bottom: 40,
-              right: 10,
-              child: Row(
-                children: <Widget>[
-                Text('account name',
-                style: TextStyle(
-                  fontSize: 16,
-                ),
+              SizedBox(height: 20.0,),
+              Row(
+                children: [
+                  //Spacer(),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Account Name'),
+                      SizedBox(height: 10.0,),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.grey,
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                        width: 200.0,
+                        height: 50.0,
+                      )
+                    ],
+                  )
+                ],
               ),
-              SizedBox(width: 5.0),
-              Container(
-                height: 45, width: 100,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius:BorderRadius.circular(15.0),
-                  boxShadow: [
-                    BoxShadow(
-                      color:Colors.grey,
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset:Offset (0,3),
-                    )
-                  ],
-                ),
+              SizedBox(height: 20.0,),
+              Row(
+                children: [
+                  Spacer(),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text('Account Name'),
+                      SizedBox(height: 10.0,),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                        width: 200.0,
+                        height: 50.0,
+                      )
+                    ],
+                  )
+                ],
               ),
-              Positioned(
-                bottom: 50,
-                left:10 ,
-                child: Row(
-                  children: <Widget>[
-                    Text('account name',
-                      style: TextStyle(
-                        fontSize: 16,
-                      ),
-                    ),
-                    SizedBox(width: 5.0),
-                    Container(
-                      height: 45, width: 100,
-                      decoration: BoxDecoration(
-                        color: Colors.grey,
-                        borderRadius:BorderRadius.circular(15.0),
-                        boxShadow: [
-                          BoxShadow(
-                            color:Colors.grey,
-                            spreadRadius: 5,
-                            blurRadius: 7,
-                            offset:Offset (0,3),
+              SizedBox(height: 20.0,),
+              Row(
+                children: [
+                  //Spacer(),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Account Name'),
+                      SizedBox(height: 10.0,),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.grey,
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                        width: 200.0,
+                        height: 50.0,
+                      )
+                    ],
+                  )
+                ],
+              ),
+              SizedBox(height: 20.0,),
+              Row(
+                children: [
+                  Spacer(),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text('Account Name'),
+                      SizedBox(height: 10.0,),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                        width: 200.0,
+                        height: 50.0,
+                      )
+                    ],
+                  )
+                ],
+              ),
+              SizedBox(height: 40.0,),
 
-                          )
-                        ],
+              Row(
+                children: [
+                  Container(
+                    width: 250.0,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        child: Column(
+                          children: [
+                            Text('Subject'),
+                            Divider(),
+                            Text('Message'),
+                          ],
+                        ),
                       ),
                     ),
-                  ],
-                ),
-              ),
-              ],
-            ),
-          ),
+                  ),
+                  IconButton(icon: Icon(Icons.send),)
+                ],
+              )
+
             ],
-        ),
-      ),
-      ],
-    ),
-    ),
-    ],
-    ),
-    ],
-    ),
-    ),
-    ],
-    ),
+          ),
+        )
         ),
     ],
     ),
