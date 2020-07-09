@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterappecoact/screens/chat_feature.dart';
 
 class Networking extends StatefulWidget {
   @override
@@ -159,29 +160,32 @@ class _NetworkingState extends State<Networking> {
                   SizedBox(height: 15.0),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 140.0),
-                    child: Container(
-                      decoration: BoxDecoration (
-                        color: Colors.teal.withOpacity(0.75),
-                        borderRadius: BorderRadius.circular(15.0),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.35),
-                            spreadRadius: 5,
-                            blurRadius:7,
-                            offset: Offset(0,3),
+                    child: GestureDetector(
+                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => ChatFeature()),),
+                      child: Container(
+                        decoration: BoxDecoration (
+                          color: Colors.teal.withOpacity(0.75),
+                          borderRadius: BorderRadius.circular(15.0),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.35),
+                              spreadRadius: 5,
+                              blurRadius:7,
+                              offset: Offset(0,3),
+                            ),
+                          ],
+                        ),
+                        height: 40,
+                        width: 75,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('Join',
+                              style: TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white
+                              )
                           ),
-                        ],
-                      ),
-                      height: 40,
-                      width: 75,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text('Join',
-                            style: TextStyle(
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white
-                            )
                         ),
                       ),
                     ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterappecoact/screens/donations.dart';
+import 'package:flutterappecoact/screens/event_roster.dart';
 import 'package:flutterappecoact/screens/petitions.dart';
 import 'package:flutterappecoact/screens/settings.dart';
 
@@ -305,6 +306,39 @@ class _ForYouPt2State extends State<ForYouPt2> {
                         ),
                         height: 40.0,
                         width: 249.0,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 15),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 70.0),
+                    child: GestureDetector(
+                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => YourCreatedEvents()),),
+                      child: Container(
+                        decoration: BoxDecoration (
+                          color: Colors.teal.withOpacity(0.75),
+                          borderRadius: BorderRadius.circular(10.0),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.2),
+                              spreadRadius: 5,
+                              blurRadius:7,
+                              offset: Offset(0,3),
+                            ),
+                          ],
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('   Your Created Events',
+                            style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                        height: 40.0,
+                        width: 230.0,
                       ),
                     ),
                   ),

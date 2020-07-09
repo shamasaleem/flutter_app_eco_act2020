@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterappecoact/screens/chat_feature.dart';
 import 'package:flutterappecoact/screens/choose_your_feed.dart';
 import 'package:flutterappecoact/screens/chose_your_interests.dart';
 import 'package:flutterappecoact/screens/create_your_own_event.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Welcome to Flutter',
-      home: Events(),
+      home: ForYouPt2(),
     );
   }
 }
