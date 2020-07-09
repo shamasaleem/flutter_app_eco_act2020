@@ -37,7 +37,7 @@ class _YourCreatedEventsState extends State<YourCreatedEvents> {
                   ],
                 ),
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(14.0),
                 child: SingleChildScrollView(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -185,6 +185,32 @@ class _YourCreatedEventsState extends State<YourCreatedEvents> {
                   ),
                 ),
               ),
+            ),
+            Container(
+              decoration: BoxDecoration (
+                color: Colors.grey,
+                borderRadius: BorderRadius.circular(10.0),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.2),
+                    spreadRadius: 5,
+                    blurRadius:7,
+                    offset: Offset(0,3),
+                  ),
+                ],
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text('                Bottom Navigation Bar',
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              height: 35.0,
+              width: 350.0,
             ),
           ],
         ),
