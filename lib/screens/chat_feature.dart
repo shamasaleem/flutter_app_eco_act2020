@@ -35,65 +35,86 @@ class _ChateFeatureState extends State<ChateFeature> {
           height: 615.0,
           width: 350.0,
         ),
-        Container(
-          height: 57,
-          child: Stack(
-            children: <Widget>[
-            Positioned(
-
-            bottom: 10, left: 10,
-            child: Row(
-              children: <Widget>[
-              Icon(Icons.send, size: 60.0,),
-            SizedBox(width: 5.0),
-            Column(
-              children: <Widget>[
-            Container(
-            child: Text('subject',
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            height: 75, width: 250,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius:BorderRadius.circular(15.0),
-              boxShadow: [
-                BoxShadow(
-                  color:Colors.grey,
-                  spreadRadius: 5,
-                  blurRadius: 7,
-                  offset:Offset (0,3),
-                )
-              ],
-            ),
-          ),
-          Divider(
-            height:0, thickness:15, color: Colors.black,
-          ),
-          Container(
-            child: Text('message',
-              style: TextStyle(
-                fontSize: 16,
-              ),
-            ),
-            height: 75, width: 250,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius:BorderRadius.circular(15.0),
-              boxShadow: [
-                BoxShadow(
-                  color:Colors.grey,
-                  spreadRadius: 5,
-                  blurRadius: 7,
-                  offset:Offset (0,3),
-                )
-              ],
-            ),
-          ),
+        Stack(children: <Widget>[
           Positioned(
-            bottom: 20, right: 10,
+
+          bottom: 10, left: 10,
+          child: Row(
+            children: <Widget>[
+            Icon(Icons.send, size: 60.0,),
+          SizedBox(width: 5.0),
+          Column(
+            children: <Widget>[
+          Container(
+          child: Text('subject',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          height: 75, width: 250,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius:BorderRadius.circular(15.0),
+            boxShadow: [
+              BoxShadow(
+                color:Colors.grey,
+                spreadRadius: 5,
+                blurRadius: 7,
+                offset:Offset (0,3),
+              )
+            ],
+          ),
+        ),
+        Divider(
+          height:0, thickness:15, color: Colors.black,
+        ),
+        Container(
+          child: Text('message',
+            style: TextStyle(
+              fontSize: 16,
+            ),
+          ),
+          height: 75, width: 250,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius:BorderRadius.circular(15.0),
+            boxShadow: [
+              BoxShadow(
+                color:Colors.grey,
+                spreadRadius: 5,
+                blurRadius: 7,
+                offset:Offset (0,3),
+              )
+            ],
+          ),
+        ),
+        Positioned(
+          bottom: 20, right: 10,
+          child: Row(
+            children: <Widget>[
+            Text('account name',
+            style: TextStyle(
+              fontSize: 16,
+            ),
+          ),
+          SizedBox(width: 5.0),
+          Container(
+            height: 125, width: 200,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius:BorderRadius.circular(15.0),
+              boxShadow: [
+                BoxShadow(
+                  color:Colors.grey,
+                  spreadRadius: 5,
+                  blurRadius: 7,
+                  offset:Offset (0,3),
+                )
+              ],
+            ),
+          ),
+          Positioned(bottom: 30, left: 10,
             child: Row(
               children: <Widget>[
               Text('account name',
@@ -105,7 +126,7 @@ class _ChateFeatureState extends State<ChateFeature> {
             Container(
               height: 125, width: 200,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: Colors.grey,
                 borderRadius:BorderRadius.circular(15.0),
                 boxShadow: [
                   BoxShadow(
@@ -117,7 +138,9 @@ class _ChateFeatureState extends State<ChateFeature> {
                 ],
               ),
             ),
-            Positioned(bottom: 30, left: 10,
+            Positioned(
+              bottom: 40,
+              right: 10,
               child: Row(
                 children: <Widget>[
                 Text('account name',
@@ -127,9 +150,9 @@ class _ChateFeatureState extends State<ChateFeature> {
               ),
               SizedBox(width: 5.0),
               Container(
-                height: 125, width: 200,
+                height: 45, width: 100,
                 decoration: BoxDecoration(
-                  color: Colors.grey,
+                  color: Colors.white,
                   borderRadius:BorderRadius.circular(15.0),
                   boxShadow: [
                     BoxShadow(
@@ -142,67 +165,41 @@ class _ChateFeatureState extends State<ChateFeature> {
                 ),
               ),
               Positioned(
-                bottom: 40,
-                right: 10,
+                bottom: 50,
+                left:10 ,
+
                 child: Row(
                   children: <Widget>[
-                  Text('account name',
-                  style: TextStyle(
-                    fontSize: 16,
-                  ),
-                ),
-                SizedBox(width: 5.0),
-                Container(
-                  height: 45, width: 100,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius:BorderRadius.circular(15.0),
-                    boxShadow: [
-                      BoxShadow(
-                        color:Colors.grey,
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset:Offset (0,3),
-                      )
-                    ],
-                  ),
-                ),
-                Positioned(
-                  bottom: 50,
-                  left:10 ,
-
-                  child: Row(
-                    children: <Widget>[
-                      Text('account name',
-                        style: TextStyle(
-                          fontSize: 16,
-                        ),
+                    Text('account name',
+                      style: TextStyle(
+                        fontSize: 16,
                       ),
-                      SizedBox(width: 5.0),
-                      Container(
-                        height: 45, width: 100,
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          borderRadius:BorderRadius.circular(15.0),
-                          boxShadow: [
-                            BoxShadow(
-                              color:Colors.grey,
-                              spreadRadius: 5,
-                              blurRadius: 7,
-                              offset:Offset (0,3),
+                    ),
+                    SizedBox(width: 5.0),
+                    Container(
+                      height: 45, width: 100,
+                      decoration: BoxDecoration(
+                        color: Colors.grey,
+                        borderRadius:BorderRadius.circular(15.0),
+                        boxShadow: [
+                          BoxShadow(
+                            color:Colors.grey,
+                            spreadRadius: 5,
+                            blurRadius: 7,
+                            offset:Offset (0,3),
 
-                            )
-                          ],
-                        ),
+                          )
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-                ],
               ),
-            ),
               ],
+            ),
           ),
+            ],
+        ),
       ),
       ],
     ),
@@ -214,7 +211,6 @@ class _ChateFeatureState extends State<ChateFeature> {
     ),
     ],
     ),
-        ),
     ],
     ),
     ),
