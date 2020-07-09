@@ -1,6 +1,9 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterappecoact/screens/calendar.dart';
+import 'package:flutterappecoact/screens/login_screen.dart';
+import 'package:flutterappecoact/screens/members.dart';
+import 'events.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -13,6 +16,9 @@ class _HomePageState extends State<HomePage> {
   var _pageOptions = [
 
     Calendar(),
+    LogIn(),
+    Events(),
+    members(),
 
   ];
 
