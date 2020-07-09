@@ -34,10 +34,9 @@ class _ChateFeatureState extends State<ChateFeature> {
           ),
           height: 615.0,
           width: 350.0,
-        ),
-        Stack(children: <Widget>[
-          Positioned(
 
+        child: Stack(children: <Widget>[
+          Positioned(
           bottom: 10, left: 10,
           child: Row(
             children: <Widget>[
@@ -90,7 +89,7 @@ class _ChateFeatureState extends State<ChateFeature> {
           ),
         ),
         Positioned(
-          bottom: 20, right: 10,
+          bottom: 50, right: 10,
           child: Row(
             children: <Widget>[
             Text('account name',
@@ -167,7 +166,6 @@ class _ChateFeatureState extends State<ChateFeature> {
               Positioned(
                 bottom: 50,
                 left:10 ,
-
                 child: Row(
                   children: <Widget>[
                     Text('account name',
@@ -211,6 +209,7 @@ class _ChateFeatureState extends State<ChateFeature> {
     ),
     ],
     ),
+        ),
     ],
     ),
     ),

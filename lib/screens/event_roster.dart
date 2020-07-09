@@ -45,7 +45,7 @@ class _YourCreatedEventsState extends State<YourCreatedEvents> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
-                          height: 900,
+                          height: 440,
                           width: 300,
                           decoration: BoxDecoration (
                             color: Colors.white,
@@ -107,73 +107,74 @@ class _YourCreatedEventsState extends State<YourCreatedEvents> {
                                   },
                                 ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Container(
-                                  height: 440,
-                                  width: 300,
-                                  decoration: BoxDecoration (
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(10.0),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Colors.grey.withOpacity(0.2),
-                                        spreadRadius: 5,
-                                        blurRadius:7,
-                                        offset: Offset(0,3),
-                                      ),
-                                    ],
-                                  ),
-                                  child: Column(
-                                    children: <Widget>[
-                                      Text('Events you have created:',
-                                        style: TextStyle(
-                                          fontSize: 20.0,
-                                          fontWeight: FontWeight.w700,
-                                        ),
-                                      ),
-                                      SizedBox(height: 15.0),
-                                      Text('Event Name: ',
-                                        style: TextStyle(
-                                          fontSize: 18.0,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      ),
-                                      Text('Conserve Nature Rally',
-                                        style: TextStyle(
-                                          fontSize: 16.0,
-                                        ),
-                                      ),
-                                      SizedBox(height: 20.0),
-                                      Text('Participants: ',
-                                        style: TextStyle(
-                                          fontSize: 18.0,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      ),
-                                      Container(
-                                        height: 300,
-                                        child: ListView.builder(
-                                          itemCount: participants1.length,
-                                          itemBuilder: (context, index){
-                                            return Container(
-                                              height: 26.0,
-                                              child: Padding(
-                                                padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                                                child: Column(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                                  children: <Widget>[
 
-                                                    Text(participants2[index]),
-                                                  ],
-                                                ),
-                                              ),
-                                            );
-                                          },
+                            ],
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          height: 440,
+                          width: 300,
+                          decoration: BoxDecoration (
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(10.0),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.2),
+                                spreadRadius: 5,
+                                blurRadius:7,
+                                offset: Offset(0,3),
+                              ),
+                            ],
+                          ),
+                          child: Column(
+                            children: <Widget>[
+                              Text('Events you have created:',
+                                style: TextStyle(
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              SizedBox(height: 15.0),
+                              Text('Event Name: ',
+                                style: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                              Text('Conserve Nature Rally',
+                                style: TextStyle(
+                                  fontSize: 16.0,
+                                ),
+                              ),
+                              SizedBox(height: 20.0),
+                              Text('Participants: ',
+                                style: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                              Container(
+                                height: 300,
+                                child: ListView.builder(
+                                  itemCount: participants1.length,
+                                  itemBuilder: (context, index){
+                                    return Container(
+                                      height: 26.0,
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                                        child: Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: <Widget>[
+
+                                            Text(participants2[index]),
+                                          ],
                                         ),
                                       ),
-                                    ],
-                                  ),
+                                    );
+                                  },
                                 ),
                               ),
                             ],
