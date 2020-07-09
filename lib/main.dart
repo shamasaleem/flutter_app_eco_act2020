@@ -4,9 +4,14 @@ import 'package:flutterappecoact/screens/chose_your_interests.dart';
 import 'package:flutterappecoact/screens/create_your_own_event.dart';
 import 'package:flutterappecoact/screens/events.dart';
 import 'package:flutterappecoact/screens/login_screen.dart';
+import 'package:flutterappecoact/screens/petitions.dart';
+import 'package:flutterappecoact/screens/signed_petitions.dart';
 import 'screens/calendar.dart';
+import 'screens/create_petition.dart';
 import 'screens/donations.dart';
+import 'screens/event_roster.dart';
 import 'screens/foryou_pt_2.dart';
+import 'screens/learn_more.dart';
 import 'screens/networking.dart';
 import 'screens/other_screen.dart';
 import 'screens/settings.dart';
@@ -21,7 +26,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Welcome to Flutter',
-      home: LogIn(),
+      home: YourCreatedEvents(),
 
 
     );

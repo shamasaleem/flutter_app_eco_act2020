@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterappecoact/screens/donations.dart';
+import 'package:flutterappecoact/screens/petitions.dart';
 import 'package:flutterappecoact/screens/settings.dart';
 
 class ForYouPt2 extends StatefulWidget {
@@ -277,31 +278,34 @@ class _ForYouPt2State extends State<ForYouPt2> {
                   SizedBox (height: 15.0),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 70.0),
-                    child: Container(
-                      decoration: BoxDecoration (
-                        color: Colors.teal.withOpacity(0.75),
-                        borderRadius: BorderRadius.circular(10.0),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.2),
-                            spreadRadius: 5,
-                            blurRadius:7,
-                            offset: Offset(0,3),
-                          ),
-                        ],
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text('Make your own petition here',
-                          style: TextStyle(
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
+                    child: GestureDetector(
+                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => Petitions()),),
+                      child: Container(
+                        decoration: BoxDecoration (
+                          color: Colors.teal.withOpacity(0.75),
+                          borderRadius: BorderRadius.circular(10.0),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.2),
+                              spreadRadius: 5,
+                              blurRadius:7,
+                              offset: Offset(0,3),
+                            ),
+                          ],
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(' Create/Sign petitions here',
+                            style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
+                        height: 40.0,
+                        width: 249.0,
                       ),
-                      height: 40.0,
-                      width: 249.0,
                     ),
                   ),
                   SizedBox(height: 30.0),
