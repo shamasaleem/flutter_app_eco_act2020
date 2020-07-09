@@ -7,7 +7,6 @@ import 'package:flutterappecoact/screens/login_screen.dart';
 import 'package:flutterappecoact/screens/petitions.dart';
 import 'package:flutterappecoact/screens/signed_petitions.dart';
 import 'screens/calendar.dart';
-import 'screens/chat_feature.dart';
 import 'screens/create_petition.dart';
 import 'screens/donations.dart';
 import 'screens/event_roster.dart';
@@ -27,7 +26,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Welcome to Flutter',
-      home: ChatFeature(),
+      home: Events(),
     );
   }
 }
