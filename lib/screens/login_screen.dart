@@ -50,7 +50,7 @@ class _LogInState extends State<LogIn> {
                       ),
                   )
                 ),
-                SizedBox (height: 425),
+                SizedBox (height: 380),
                 Center(
                   child: Text('Create Account',
                       style: TextStyle(
@@ -62,7 +62,7 @@ class _LogInState extends State<LogIn> {
                 ),
                 SizedBox(height: 5.0),
                 Container(
-                  height: 110,
+                  height: 130,
                   width: 300,
                   decoration: BoxDecoration (
                     color: Colors.white,
@@ -80,28 +80,23 @@ class _LogInState extends State<LogIn> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: Text('Email: ',
-                            style: TextStyle(
-                                fontSize: 20.0,
-                                fontWeight: FontWeight.w600,
-                                color: Colors.grey,
-                            ),
-                        ),
-                      ),
-                      Divider(
-                        thickness: 2.0,
-                        color: Colors.grey,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: Text('Password: ',
-                          style: TextStyle(
-                            fontSize: 20.0,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.grey,
+                        padding: const EdgeInsets.only(left: 8.0),
+                        child:TextField(
+                          obscureText: false,
+                          decoration: InputDecoration(
+                            labelText: 'Email',
                           ),
-                        ),
+                        )
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8.0),
+                       child: TextField(
+                         obscureText: true,
+                         decoration: InputDecoration(
+                           labelText: 'Password',
+                         ),
+                       ),
                       ),
                     ],
                   ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterappecoact/screens/members.dart';
 
 class ChatFeature extends StatefulWidget {
   @override
@@ -13,11 +14,19 @@ class _ChatFeatureState extends State<ChatFeature> {
         child: Column(
           children: <Widget>[
             SizedBox (height: 30.0),
-            Text ('Activism Group',
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-              ),
+            Row(
+              children: <Widget>[
+                Text ('     Activism Group',
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(width: 36.0),
+                GestureDetector(
+                    onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => members()),),
+                    child: Text('see members')),
+              ],
             ),
             Container(
                 decoration: BoxDecoration (

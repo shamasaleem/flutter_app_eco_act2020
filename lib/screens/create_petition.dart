@@ -36,7 +36,7 @@ class _CreatePetitionState extends State<CreatePetition> {
                 child: Column(
                   children: <Widget>[
                     Container(
-                      height: 40.0,
+                      height: 75.0,
                       width: 300.0,
                       decoration: BoxDecoration (
                         color: Colors.white,
@@ -52,16 +52,43 @@ class _CreatePetitionState extends State<CreatePetition> {
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Text('Name of Petition: ',
-                            style: TextStyle(
-                                fontSize: 16.0,
+                        child: TextField(
+                        obscureText: false,
+                        decoration: InputDecoration(
+                          labelText: 'Name of Petition: ',
+                        ),
+                      )
+                      ),
+                    ),
+                    SizedBox(height: 30.0),
+                    Container(
+                      height: 75.0,
+                      width: 300.0,
+                      decoration: BoxDecoration (
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10.0),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.35),
+                            spreadRadius: 5,
+                            blurRadius:7,
+                            offset: Offset(0,3),
+                          ),
+                        ],
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                          child: TextField(
+                            obscureText: false,
+                            decoration: InputDecoration(
+                              labelText: 'Description: ',
                             ),
-                        ),
+                          )
                       ),
                     ),
                     SizedBox(height: 30.0),
                     Container(
-                      height: 100.0,
+                      height: 75.0,
                       width: 300.0,
                       decoration: BoxDecoration (
                         color: Colors.white,
@@ -77,16 +104,17 @@ class _CreatePetitionState extends State<CreatePetition> {
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Text('Description: ',
-                          style: TextStyle(
-                            fontSize: 16.0,
-                          ),
-                        ),
+                          child: TextField(
+                            obscureText: false,
+                            decoration: InputDecoration(
+                              labelText: 'Adressed to: ',
+                            ),
+                          )
                       ),
                     ),
                     SizedBox(height: 30.0),
                     Container(
-                      height: 40.0,
+                      height: 75.0,
                       width: 300.0,
                       decoration: BoxDecoration (
                         color: Colors.white,
@@ -102,36 +130,12 @@ class _CreatePetitionState extends State<CreatePetition> {
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Text('Adressed to: ',
-                          style: TextStyle(
-                            fontSize: 16.0,
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: 30.0),
-                    Container(
-                      height: 40.0,
-                      width: 300.0,
-                      decoration: BoxDecoration (
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10.0),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.35),
-                            spreadRadius: 5,
-                            blurRadius:7,
-                            offset: Offset(0,3),
-                          ),
-                        ],
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text('Signatures Needed: ',
-                          style: TextStyle(
-                            fontSize: 16.0,
-                          ),
-                        ),
+                          child: TextField(
+                            obscureText: false,
+                            decoration: InputDecoration(
+                              labelText: 'Signatures Needed: ',
+                            ),
+                          )
                       ),
                     ),
                     SizedBox(height: 30.0),

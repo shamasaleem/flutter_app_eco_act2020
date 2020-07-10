@@ -158,13 +158,11 @@ class _ChooseYourInterestsState extends State<ChooseYourInterests> {
           ),
       ),
     ],
-
     ),
     ),
 
       ),
     ],
-
       ),
     );
   }

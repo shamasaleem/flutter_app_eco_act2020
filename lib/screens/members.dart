@@ -29,10 +29,10 @@ class _membersState extends State<members> {
                 top: 65,
                 left: 20,
                 child: Container(
-                  width: 375,
-                  height: 600,
+                  width: 350,
+                  height: 615,
                   decoration: BoxDecoration (
-                    color: Colors.blueAccent.withOpacity(0.30),
+                    color: Colors.lightBlueAccent.withOpacity(0.20),
                     borderRadius: BorderRadius.circular(20.0),
                     boxShadow: [
                       BoxShadow(
@@ -50,7 +50,7 @@ class _membersState extends State<members> {
                           children: <Widget>[
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text ('Climate Group', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,)
+                              child: Text ('Activism Group', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,)
                               ),
                             ),
                           ],
@@ -141,7 +141,7 @@ class _membersState extends State<members> {
                         children: [
                           Container(
                             decoration: BoxDecoration (
-                              color: Colors.green,
+                              color: Colors.teal.withOpacity(0.75),
                               borderRadius: BorderRadius.circular(20.0),
                               boxShadow: [
                                 BoxShadow(
@@ -152,10 +152,15 @@ class _membersState extends State<members> {
                                 ),
                               ],
                             ),
-                            width: 200,
-                            height: 80,
+                            width: 175,
+                            height: 50,
                             child:Center(
-                              child: Text ('Join Group', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,)
+                              child: Text ('Join Group',
+                                  style: TextStyle(
+                                      fontSize: 23,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                  ),
                               ),
                             ),
                           )],
@@ -163,9 +168,39 @@ class _membersState extends State<members> {
                     ],
                   ),
                 ),
-              )
-            ]
-
-        ));
+              ),
+              Positioned(
+                bottom: 20.0,
+                left: 20.0,
+                child: Container(
+                  decoration: BoxDecoration (
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.circular(10.0),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.2),
+                        spreadRadius: 5,
+                        blurRadius:7,
+                        offset: Offset(0,3),
+                      ),
+                    ],
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text('                Bottom Navigation Bar',
+                      style: TextStyle(
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  height: 35.0,
+                  width: 350.0,
+                ),
+              ),
+            ],
+        ),
+    );
   }
 }

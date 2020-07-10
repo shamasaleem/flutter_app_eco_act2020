@@ -55,12 +55,12 @@ class _OtherScreenState extends State<OtherScreen> {
 
                 child: Padding(
                   padding: const EdgeInsets.all(15.0),
-                  child: Text('Please Explain...',
-                    style: TextStyle(
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.w700,
+                  child:TextField(
+                    obscureText: false,
+                    decoration: InputDecoration(
+                      labelText: 'Please Explain',
                     ),
-                  ),
+                  )
                 ),
                 height: 200,
                 width: 300,

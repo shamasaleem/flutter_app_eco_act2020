@@ -190,6 +190,36 @@ class _NetworkingState extends State<Networking> {
                       ),
                     ),
                   ),
+                  SizedBox(height: 15.0),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 105.0),
+                    child: Container(
+                      decoration: BoxDecoration (
+                        color: Colors.teal.withOpacity(0.75),
+                        borderRadius: BorderRadius.circular(15.0),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.35),
+                            spreadRadius: 5,
+                            blurRadius:7,
+                            offset: Offset(0,3),
+                          ),
+                        ],
+                      ),
+                      height: 40,
+                      width: 100,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text('  My Groups',
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white
+                            )
+                        ),
+                      ),
+                    ),
+                  )
     ],
 
     )

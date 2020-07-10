@@ -12,7 +12,7 @@ class _CreateOwnYourEventState extends State<CreateOwnYourEvent> {
       body: Center(
         child: Column(
           children: <Widget>[
-            SizedBox (height: 30.0),
+            SizedBox(height: 10.0),
             Text ('Create Your Own Event',
                 style: TextStyle(
                   fontSize: 30,
@@ -40,56 +40,33 @@ class _CreateOwnYourEventState extends State<CreateOwnYourEvent> {
               Padding(
                 padding: const EdgeInsets.all(11.0),
                 child: Container(
-                  decoration: BoxDecoration (
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(15.0),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.35),
-                        spreadRadius: 5,
-                        blurRadius:7,
-                        offset: Offset(0,3),
-                      ),
-                    ],
-                  ),
-                  height: 65.0,
-                  width: 325.0,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text('Name of the Event:',
-                        style: TextStyle(
-                            fontSize: 16,
+                    decoration: BoxDecoration (
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(15.0),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.35),
+                          spreadRadius: 5,
+                          blurRadius:7,
+                          offset: Offset(0,3),
                         ),
+                      ],
                     ),
-                  )
+                    height: 75.0,
+                    width: 325.0,
+                    child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextField(
+                          obscureText: false,
+                          decoration: InputDecoration(
+                            labelText: 'Name of Event: ',
+                          ),
+                        )
+                    )
                 ),
               ),
               Positioned(
-                top: 100,
-                left: 10,
-                child: Container(
-                  decoration: BoxDecoration (
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(15.0),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.35),
-                        spreadRadius: 5,
-                        blurRadius:7,
-                        offset: Offset(0,3),
-              ),
-                    ],
-                  ),
-                  height: 50,
-                  width: 325,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text('Location:'),
-                  ),
-                ),
-              ),
-              Positioned(
-                top: 175,
+                top: 115,
                 left: 10,
                 child: Container(
                   decoration: BoxDecoration (
@@ -104,16 +81,21 @@ class _CreateOwnYourEventState extends State<CreateOwnYourEvent> {
                       ),
                     ],
                   ),
-                  height: 50,
+                  height: 75,
                   width: 325,
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text('Date:'),
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextField(
+                        obscureText: false,
+                        decoration: InputDecoration(
+                          labelText: 'Location: ',
+                        ),
+                      )
                   ),
                 ),
               ),
               Positioned(
-                top: 250,
+                top: 225,
                 left: 10,
                 child: Container(
                   decoration: BoxDecoration (
@@ -128,17 +110,51 @@ class _CreateOwnYourEventState extends State<CreateOwnYourEvent> {
                       ),
                     ],
                   ),
-                  height: 50,
+                  height: 75,
                   width: 325,
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text('Time:'),
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextField(
+                        obscureText: false,
+                        decoration: InputDecoration(
+                          labelText: 'Date: ',
+                        ),
+                      )
+                  ),
+                ),
+              ),
+              Positioned(
+                top: 335,
+                left: 10,
+                child: Container(
+                  decoration: BoxDecoration (
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15.0),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.35),
+                        spreadRadius: 5,
+                        blurRadius:7,
+                        offset: Offset(0,3),
+                      ),
+                    ],
+                  ),
+                  height: 75,
+                  width: 325,
+                  child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextField(
+                        obscureText: false,
+                        decoration: InputDecoration(
+                          labelText: 'Time: ',
+                        ),
+                      )
                   ),
                 ),
               ),
 
               Positioned(
-                top: 325,
+                top: 435,
                 left: 10,
                 child: Container(
                   decoration: BoxDecoration (
@@ -153,11 +169,16 @@ class _CreateOwnYourEventState extends State<CreateOwnYourEvent> {
                       ),
                     ],
                   ),
-                  height: 200,
+                  height: 100,
                   width: 325,
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text('Description of Event:'),
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextField(
+                        obscureText: false,
+                        decoration: InputDecoration(
+                          labelText: 'Event Description: ',
+                        ),
+                      )
                   ),
                 ),
               ),
@@ -182,15 +203,16 @@ class _CreateOwnYourEventState extends State<CreateOwnYourEvent> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(' Create',
-                        style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                        ),
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),
-              ),
+              )
+
             ],
           ),
             SizedBox(height: 15.0),
