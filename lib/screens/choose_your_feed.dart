@@ -7,6 +7,11 @@ class ChooseYourFeed extends StatefulWidget {
 }
 
 class _ChooseYourFeedState extends State<ChooseYourFeed> {
+  bool lifestyleButton = false;
+  bool activismButton = false;
+  bool newsButton = false;
+  bool scienceButton = false;
+  bool publicFiguresButton = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,23 +40,30 @@ class _ChooseYourFeedState extends State<ChooseYourFeed> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(
-                        decoration: BoxDecoration (
-                          color: Colors.white.withOpacity(0.9),
-                          borderRadius: BorderRadius.circular(20.0),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.35),
-                              spreadRadius: 5,
-                              blurRadius:7,
-                              offset: Offset(0,3),
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            lifestyleButton = !lifestyleButton;
+                          });
+                        },
+                        child: Container(
+                          decoration: BoxDecoration (
+                            color: lifestyleButton ? Colors.grey : Colors.white.withOpacity(0.9),
+                            borderRadius: BorderRadius.circular(20.0),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.35),
+                                spreadRadius: 5,
+                                blurRadius:7,
+                                offset: Offset(0,3),
+                              ),
+                            ],
+                          ),
+                          width: 150,
+                          height: 100,
+                          child:Center(
+                            child: Text ('Lifestyle', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,)
                             ),
-                          ],
-                        ),
-                        width: 150,
-                        height: 100,
-                        child:Center(
-                          child: Text ('Lifestyle', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,)
                           ),
                         ),
                       )],
@@ -60,42 +72,56 @@ class _ChooseYourFeedState extends State<ChooseYourFeed> {
                   Row(
                     //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        decoration: BoxDecoration (
-                          color: Colors.white.withOpacity(0.9),
-                          borderRadius: BorderRadius.circular(20.0),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.35),
-                              spreadRadius: 5,
-                              blurRadius:7,
-                              offset: Offset(0,3),
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            activismButton = !activismButton;
+                          });
+                        },
+                        child: Container(
+                          decoration: BoxDecoration (
+                            color: activismButton ? Colors.grey : Colors.white.withOpacity(0.9),
+                            borderRadius: BorderRadius.circular(20.0),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.35),
+                                spreadRadius: 5,
+                                blurRadius:7,
+                                offset: Offset(0,3),
+                              ),
+                            ],
+                          ),width: 150,
+                          height: 100,
+                          child:Center(
+                            child: Text ('Activism', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,)
                             ),
-                          ],
-                        ),width: 150,
-                        height: 100,
-                        child:Center(
-                          child: Text ('Activism', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,)
                           ),
                         ),
                       ),
                       SizedBox(width: 20.0,),
-                      Container(
-                        decoration: BoxDecoration (
-                          color: Colors.white.withOpacity(0.9),
-                          borderRadius: BorderRadius.circular(20.0),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.35),
-                              spreadRadius: 5,
-                              blurRadius:7,
-                              offset: Offset(0,3),
+                      GestureDetector(
+                        onTap: () {
+                        setState(() {
+                          newsButton = !newsButton;
+                        });
+                        },
+                        child: Container(
+                          decoration: BoxDecoration (
+                            color: newsButton ? Colors.grey : Colors.white.withOpacity(0.9),
+                            borderRadius: BorderRadius.circular(20.0),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.35),
+                                spreadRadius: 5,
+                                blurRadius:7,
+                                offset: Offset(0,3),
+                              ),
+                            ],
+                          ),width: 150,
+                          height: 100,
+                          child:Center(
+                            child: Text ('News', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,)
                             ),
-                          ],
-                        ),width: 150,
-                        height: 100,
-                        child:Center(
-                          child: Text ('News', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,)
                           ),
                         ),
                       ),
@@ -105,42 +131,56 @@ class _ChooseYourFeedState extends State<ChooseYourFeed> {
                   Row(
                     //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        decoration: BoxDecoration (
-                          color: Colors.white.withOpacity(0.9),
-                          borderRadius: BorderRadius.circular(20.0),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.35),
-                              spreadRadius: 5,
-                              blurRadius:7,
-                              offset: Offset(0,3),
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                           scienceButton = !scienceButton;
+                          });
+                        },
+                        child: Container(
+                          decoration: BoxDecoration (
+                            color: scienceButton ? Colors.grey : Colors.white.withOpacity(0.9),
+                            borderRadius: BorderRadius.circular(20.0),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.35),
+                                spreadRadius: 5,
+                                blurRadius:7,
+                                offset: Offset(0,3),
+                              ),
+                            ],
+                          ),width: 150,
+                          height: 100,
+                          child:Center(
+                            child: Text ('Science', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,)
                             ),
-                          ],
-                        ),width: 150,
-                        height: 100,
-                        child:Center(
-                          child: Text ('Science', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,)
                           ),
                         ),
                       ),
                       SizedBox(width: 20.0,),
-                      Container(
-                        decoration: BoxDecoration (
-                          color: Colors.white.withOpacity(0.9),
-                          borderRadius: BorderRadius.circular(20.0),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.35),
-                              spreadRadius: 5,
-                              blurRadius:7,
-                              offset: Offset(0,3),
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            publicFiguresButton = !publicFiguresButton;
+                          });
+                        },
+                        child: Container(
+                          decoration: BoxDecoration (
+                            color: publicFiguresButton ? Colors.grey : Colors.white.withOpacity(0.9),
+                            borderRadius: BorderRadius.circular(20.0),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.35),
+                                spreadRadius: 5,
+                                blurRadius:7,
+                                offset: Offset(0,3),
+                              ),
+                            ],
+                          ),width: 150,
+                          height: 100,
+                          child:Center(
+                            child: Text ('Public Figures', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,)
                             ),
-                          ],
-                        ),width: 150,
-                        height: 100,
-                        child:Center(
-                          child: Text ('Public Figures', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,)
                           ),
                         ),
                       ),

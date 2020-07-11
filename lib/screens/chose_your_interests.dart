@@ -86,53 +86,67 @@ class _ChooseYourInterestsState extends State<ChooseYourInterests> {
                   Row(
                     //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.9),
-                          borderRadius: BorderRadius.circular(20.0),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.35),
-                              spreadRadius: 5,
-                              blurRadius: 7,
-                              offset: Offset(0, 3),
-                            ),
-                          ],
-                        ),
-                        width: 150,
-                        height: 100,
-                        child: Center(
-                          child: Text('Education',
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                              )),
+                      GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            educationButton = !educationButton;
+                          });
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: educationButton ? Colors.grey : Colors.white.withOpacity(0.9),
+                            borderRadius: BorderRadius.circular(20.0),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.35),
+                                spreadRadius: 5,
+                                blurRadius: 7,
+                                offset: Offset(0, 3),
+                              ),
+                            ],
+                          ),
+                          width: 150,
+                          height: 100,
+                          child: Center(
+                            child: Text('Education',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                )),
+                          ),
                         ),
                       ),
                       SizedBox(
                         width: 20.0,
                       ),
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.9),
-                          borderRadius: BorderRadius.circular(20.0),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.35),
-                              spreadRadius: 5,
-                              blurRadius: 7,
-                              offset: Offset(0, 3),
-                            ),
-                          ],
-                        ),
-                        width: 150,
-                        height: 100,
-                        child: Center(
-                          child: Text('Create Events',
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                              )),
+                      GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            createEventsButton = !createEventsButton;
+                          });
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: createEventsButton ? Colors.grey : Colors.white.withOpacity(0.9),
+                            borderRadius: BorderRadius.circular(20.0),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.35),
+                                spreadRadius: 5,
+                                blurRadius: 7,
+                                offset: Offset(0, 3),
+                              ),
+                            ],
+                          ),
+                          width: 150,
+                          height: 100,
+                          child: Center(
+                            child: Text('Create Events',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                )),
+                          ),
                         ),
                       ),
                     ],
@@ -143,53 +157,67 @@ class _ChooseYourInterestsState extends State<ChooseYourInterests> {
                   Row(
                     //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.9),
-                          borderRadius: BorderRadius.circular(20.0),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.35),
-                              spreadRadius: 5,
-                              blurRadius: 7,
-                              offset: Offset(0, 3),
-                            ),
-                          ],
-                        ),
-                        width: 150,
-                        height: 100,
-                        child: Center(
-                          child: Text('Networking',
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                              )),
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            networkingButton = !networkingButton;
+                          });
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: networkingButton ? Colors.grey : Colors.white.withOpacity(0.9),
+                            borderRadius: BorderRadius.circular(20.0),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.35),
+                                spreadRadius: 5,
+                                blurRadius: 7,
+                                offset: Offset(0, 3),
+                              ),
+                            ],
+                          ),
+                          width: 150,
+                          height: 100,
+                          child: Center(
+                            child: Text('Networking',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                )),
+                          ),
                         ),
                       ),
                       SizedBox(
                         width: 20.0,
                       ),
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.9),
-                          borderRadius: BorderRadius.circular(20.0),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.35),
-                              spreadRadius: 5,
-                              blurRadius: 7,
-                              offset: Offset(0, 3),
-                            ),
-                          ],
-                        ),
-                        width: 150,
-                        height: 100,
-                        child: Center(
-                          child: Text('Other',
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                              )),
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            otherButton = !otherButton;
+                          });
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: otherButton ? Colors.grey : Colors.white.withOpacity(0.9),
+                            borderRadius: BorderRadius.circular(20.0),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.35),
+                                spreadRadius: 5,
+                                blurRadius: 7,
+                                offset: Offset(0, 3),
+                              ),
+                            ],
+                          ),
+                          width: 150,
+                          height: 100,
+                          child: Center(
+                            child: Text('Other',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                )),
+                          ),
                         ),
                       ),
                     ],
