@@ -14,11 +14,21 @@ class _CreateOwnYourEventState extends State<CreateOwnYourEvent> {
           child: Column(
             children: <Widget>[
               SizedBox(height: 10.0),
-              Text ('Create Your Own Event',
-                  style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
+              Row(
+                children: <Widget>[
+                  IconButton(
+                    onPressed: () => Navigator.pop(context),
+                    icon: Icon(Icons.arrow_back_ios,
+                    ),),
+                  SizedBox(width: 5.0),
+                  Text ('Create Your Own Event',
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'DMSerifDisplay',
+                      ),
                   ),
+                ],
               ),
             Stack(
               children: <Widget>[
@@ -35,7 +45,7 @@ class _CreateOwnYourEventState extends State<CreateOwnYourEvent> {
                     ),
                   ],
                 ),
-                  height: 615.0,
+                  height: 650.0,
                   width: 350.0,
                 ),
                 Padding(
@@ -208,6 +218,7 @@ class _CreateOwnYourEventState extends State<CreateOwnYourEvent> {
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
+                          fontFamily: 'DMSerifDisplay',
                         ),
                       ),
                     ),
@@ -216,33 +227,6 @@ class _CreateOwnYourEventState extends State<CreateOwnYourEvent> {
 
               ],
             ),
-              SizedBox(height: 15.0),
-              Container(
-                decoration: BoxDecoration (
-                  color: Colors.grey,
-                  borderRadius: BorderRadius.circular(10.0),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.2),
-                      spreadRadius: 5,
-                      blurRadius:7,
-                      offset: Offset(0,3),
-                    ),
-                  ],
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text('                Bottom Navigation Bar',
-                    style: TextStyle(
-                      fontSize: 17.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-                height: 35.0,
-                width: 350.0,
-              )
             ],
           ),
         ),

@@ -14,119 +14,106 @@ class _SignedPetitionsState extends State<SignedPetitions> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            SizedBox(height: 10.0),
-            Text('Signed Petitions',
-                style: TextStyle(
-                    fontSize: 30.0, fontWeight: FontWeight.bold,
-                ),
-            ),
-            SizedBox(height: 10.0),
-            Container(
-              height: 615,
-              width: 350,
-              decoration: BoxDecoration (
-                color: Colors.lightBlueAccent.withOpacity(0.2),
-                borderRadius: BorderRadius.circular(20.0),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.35),
-                    spreadRadius: 5,
-                    blurRadius:7,
-                    offset: Offset(0,3),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              SizedBox(height: 10.0),
+              Row(
+                children: <Widget>[
+                  IconButton(
+                    onPressed: () => Navigator.pop(context),
+                    icon: Icon(Icons.arrow_back_ios,
+                    ),),
+                  SizedBox(width: 60.0),
+                  Text('Signed Petitions',
+                      style: TextStyle(
+                          fontSize: 30.0, fontWeight: FontWeight.w600,
+                        fontFamily: 'DMSerifDisplay',
+                      ),
                   ),
                 ],
               ),
-              child: Column(
-                children: <Widget>[
-                  Container(
-                    height: 615,
-                    child: ListView.builder(
-                      itemCount: petitionName.length,
-                      itemBuilder: (context, index){
-                        return Container(
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                SizedBox(height: 15.0),
-                                Text('Name of petition: ' + petitionName[index]),
-                                Text('Description: ' + description[index]),
-                                Text('Adressed to: ' + adressedTo[index]),
-                                Text('Signatures needed: ' + signaturesRequired[index]),
-                                SizedBox(height: 5.0),
-                                Container(
-                                  height: 40.0,
-                                  width: 120.0,
-                                  decoration: BoxDecoration (
-                                    color: Colors.teal.withOpacity(0.75),
-                                    borderRadius: BorderRadius.circular(10.0),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Colors.grey.withOpacity(0.2),
-                                        spreadRadius: 5,
-                                        blurRadius:7,
-                                        offset: Offset(0,3),
-                                      ),
-                                    ],
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Text('   Remove',
-                                      style: TextStyle(
-                                        fontSize: 20.0,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white,
+              SizedBox(height: 10.0),
+              Container(
+                height: 615,
+                width: 350,
+                decoration: BoxDecoration (
+                  color: Colors.lightBlueAccent.withOpacity(0.2),
+                  borderRadius: BorderRadius.circular(20.0),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.35),
+                      spreadRadius: 5,
+                      blurRadius:7,
+                      offset: Offset(0,3),
+                    ),
+                  ],
+                ),
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      height: 615,
+                      child: ListView.builder(
+                        itemCount: petitionName.length,
+                        itemBuilder: (context, index){
+                          return Container(
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  SizedBox(height: 15.0),
+                                  Text('Name of petition: ' + petitionName[index]),
+                                  Text('Description: ' + description[index]),
+                                  Text('Adressed to: ' + adressedTo[index]),
+                                  Text('Signatures needed: ' + signaturesRequired[index]),
+                                  SizedBox(height: 5.0),
+                                  Container(
+                                    height: 40.0,
+                                    width: 120.0,
+                                    decoration: BoxDecoration (
+                                      color: Colors.teal.withOpacity(0.75),
+                                      borderRadius: BorderRadius.circular(10.0),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey.withOpacity(0.2),
+                                          spreadRadius: 5,
+                                          blurRadius:7,
+                                          offset: Offset(0,3),
+                                        ),
+                                      ],
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text('   Remove',
+                                        style: TextStyle(
+                                          fontSize: 20.0,
+                                          fontWeight: FontWeight.w600,
+                                          color: Colors.white,
+                                          fontFamily: 'DMSerifDisplay',
+                                        ),
                                       ),
                                     ),
                                   ),
-                                ),
-                                SizedBox(height: 10.0),
-                                Divider(
-                                  thickness: 2.0,
-                                  color: Colors.black,
-                                ),
-                              ],
+                                  SizedBox(height: 10.0),
+                                  Divider(
+                                    thickness: 2.0,
+                                    color: Colors.black,
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-                        );
-                      },
+                          );
+                        },
+                      ),
                     ),
-                  ),
-                ],
-              )
-            ),
-            Container(
-              decoration: BoxDecoration (
-                color: Colors.grey,
-                borderRadius: BorderRadius.circular(10.0),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.2),
-                    spreadRadius: 5,
-                    blurRadius:7,
-                    offset: Offset(0,3),
-                  ),
-                ],
+                  ],
+                )
               ),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text('                Bottom Navigation Bar',
-                  style: TextStyle(
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-              height: 35.0,
-              width: 350.0,
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

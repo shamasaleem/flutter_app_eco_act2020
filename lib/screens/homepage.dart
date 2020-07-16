@@ -1,11 +1,20 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterappecoact/screens/calendar.dart';
+import 'package:flutterappecoact/screens/chat_feature.dart';
+import 'package:flutterappecoact/screens/create_petition.dart';
+import 'package:flutterappecoact/screens/create_your_own_event.dart';
+import 'package:flutterappecoact/screens/donations.dart';
+import 'package:flutterappecoact/screens/event_roster.dart';
 import 'package:flutterappecoact/screens/foryou_pt_2.dart';
 import 'package:flutterappecoact/screens/learn_more.dart';
 import 'package:flutterappecoact/screens/login_screen.dart';
 import 'package:flutterappecoact/screens/members.dart';
 import 'package:flutterappecoact/screens/networking.dart';
+import 'package:flutterappecoact/screens/petitions.dart';
+import 'package:flutterappecoact/screens/settings.dart';
+import 'package:flutterappecoact/screens/signed_petitions.dart';
+import 'package:flutterappecoact/screens/your_sign_ups.dart';
 import 'events.dart';
 
 class HomePage extends StatefulWidget {
@@ -22,6 +31,9 @@ class _HomePageState extends State<HomePage> {
     LearnMore(),
     Events (),
     Networking (),
+
+
+
 
   ];
 
@@ -41,7 +53,7 @@ class _HomePageState extends State<HomePage> {
           color: Colors.blue,
         ),
         child: CurvedNavigationBar(
-          backgroundColor: Colors.green[200],
+          backgroundColor: Colors.green[100],
           items: <Widget>[
             Icon(Icons.home, size: 30),
             Icon(Icons.search, size: 30),
