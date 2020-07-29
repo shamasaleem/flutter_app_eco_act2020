@@ -20,7 +20,6 @@ class _LogInState extends State<LogIn> {
 
             child: Scaffold(
               backgroundColor: Colors.transparent,
-
             ),
           ),
           Positioned(
