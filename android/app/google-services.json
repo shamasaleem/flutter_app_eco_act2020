@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "473533086386",
+    "firebase_url": "https://ecoact2020-fc636.firebaseio.com",
+    "project_id": "ecoact2020-fc636",
+    "storage_bucket": "ecoact2020-fc636.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:473533086386:android:aa0936dd724f04ebf967ab",
+        "android_client_info": {
+          "package_name": "com.endgame.flutterappecoact"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "473533086386-is92tvc8gp55r12va0ijqq9fhho2fsal.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdnBPgkuegcjHOL5mpsO-8cgsfaFNTQik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "473533086386-is92tvc8gp55r12va0ijqq9fhho2fsal.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
