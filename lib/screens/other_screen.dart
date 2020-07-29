@@ -37,8 +37,9 @@ class _OtherScreenState extends State<OtherScreen> {
                     child: Text('If other, please explain',
                       style: TextStyle(
                         fontSize: 30.0,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w600,
                         color: Colors.black,
+                        fontFamily: 'DMSerifDisplay',
                       ),
                     ),
                   ),
@@ -81,6 +82,7 @@ class _OtherScreenState extends State<OtherScreen> {
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
+                        fontFamily: 'DMSerifDisplay',
                       ),
                     ),
                   ),
