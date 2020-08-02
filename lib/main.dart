@@ -8,6 +8,7 @@ import 'package:flutterappecoact/screens/homepage.dart';
 import 'package:flutterappecoact/screens/login_screen.dart';
 import 'package:flutterappecoact/screens/petitions.dart';
 import 'package:flutterappecoact/screens/signed_petitions.dart';
+import 'package:flutterappecoact/screens/signup_screen.dart';
 import 'screens/calendar.dart';
 import 'screens/create_petition.dart';
 import 'screens/donations.dart';
@@ -45,7 +46,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return SignupScreen(
 
     );
 
