@@ -8,6 +8,11 @@ import 'package:flutterappecoact/screens/homepage.dart';
 import 'package:flutterappecoact/screens/login_screen.dart';
 import 'package:flutterappecoact/screens/petitions.dart';
 import 'package:flutterappecoact/screens/signed_petitions.dart';
+import 'package:flutterappecoact/screens/signup_screen.dart';
+import 'package:flutterappecoact/services/database_service.dart';
+import 'package:flutterappecoact/services/firebase_auth_service.dart';
+import 'package:flutterappecoact/services/user_service.dart';
+import 'package:provider/provider.dart';
 import 'screens/calendar.dart';
 import 'screens/create_petition.dart';
 import 'screens/donations.dart';
@@ -26,9 +31,30 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Welcome to Flutter',
-      home: LogIn(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<FirebaseAuthService>(
+          create: (_) => FirebaseAuthService(),
+        ),
+        Provider<DatabaseService>(
+          create: (_) => DatabaseService(),
+        ),
+        ChangeNotifierProxyProvider<FirebaseAuthService, UserService>(
+          create: (_) => UserService(),
+          update: (BuildContext context, FirebaseAuthService authService,
+              UserService userService) {
+            if (authService.user == null) {
+              return userService..clearUid();
+            } else {
+              return userService..setUid(authService.user.uid);
+            }
+          },
+        ),
+      ],
+        child: MaterialApp(
+          title: 'Welcome to Flutter',
+          home: LogIn(),
+        ),
     );
   }
 }
@@ -45,9 +71,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-
-    );
+    return SignupScreen();
 
   }
 }
