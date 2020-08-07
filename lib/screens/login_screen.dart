@@ -185,7 +185,6 @@ class _LogInState extends State<LogIn> {
       try {
         dynamic successful = await authService.signInWithEmailAndPassword(
             email, password);
-
         if (successful != null) {
           Navigator.push(context, MaterialPageRoute(builder: (_) => HomePage()));
           _emailInputController.clear();
