@@ -73,47 +73,8 @@ class _LogInState extends State<LogIn> {
                       )
                     ),
                     SizedBox (height: 20),
-                    Center(
-                      child: GestureDetector(
-                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => SignupScreen())),
-                        child: Container(
-                          height: 40,
-                          width: 250,
-                          decoration: BoxDecoration (
-                            color: Colors.teal.withOpacity(0.75),
-                            borderRadius: BorderRadius.circular(10.0),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey.withOpacity(0.2),
-                                spreadRadius: 5,
-                                blurRadius:7,
-                                offset: Offset(0,3),
-                              ),
-                            ],
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(5.0),
-                            child: Text('  Click here to register',
-                                style: TextStyle(
-                                    fontSize: 23.0,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white,
-                                  fontFamily: 'DMSerifDisplay',
-                                ),
-                            ),
-                          ),
-                        ),
-                      )
-                    ),
-                    SizedBox(height: 330.0),
-                    Text('Sign In',
-                        style: TextStyle(
-                          fontSize: 23.0,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.white,
-                          fontFamily: 'DMSerifDisplay',
-                        ),
-                    ),
+
+                    SizedBox(height: 15.0),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
@@ -142,35 +103,88 @@ class _LogInState extends State<LogIn> {
                         ),
                       ],
                     ),
-                    GestureDetector(
-                      onTap: signInWithForm,
-                      /*
-                      async {
-                        if(_loginFormKey.currentState.validate()){
-                          setState(() {
-                            loading = true;
-                          });
-                          dynamic result = await authService.signInWithEmailAndPassword(email, password);
-                          if(result == null){
+                    Container(
+                      height: 45,
+                      width: 80,
+                      decoration: BoxDecoration (
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10.0),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.2),
+                            spreadRadius: 5,
+                            blurRadius:7,
+                            offset: Offset(0,3),
+                          ),
+                        ],
+                      ),
+                      child: GestureDetector(
+                        onTap: signInWithForm,
+                        /*
+                        async {
+                          if(_loginFormKey.currentState.validate()){
                             setState(() {
-                              print('Please supply a valid email');
-                              loading = false;
+                              loading = true;
                             });
+                            dynamic result = await authService.signInWithEmailAndPassword(email, password);
+                            if(result == null){
+                              setState(() {
+                                print('Please supply a valid email');
+                                loading = false;
+                              });
+                            }
+                            Navigator.push(context, MaterialPageRoute(builder: (_) => HomePage()));
                           }
-                          Navigator.push(context, MaterialPageRoute(builder: (_) => HomePage()));
-                        }
 
-                      },*/
-                      child: Text('Next',
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontFamily: 'DMSerifDisplay',
+                        },*/
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('Sign In',
+                            style: TextStyle(
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                              fontFamily: 'DMSerifDisplay',
+                            ),
+                          ),
                         ),
                       ),
                     ),
+                    SizedBox(height: 300.0),
+                    Center(
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => SignupScreen())),
+                          child: Container(
+                            height: 40,
+                            width: 250,
+                            decoration: BoxDecoration (
+                              color: Colors.teal.withOpacity(0.75),
+                              borderRadius: BorderRadius.circular(10.0),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.2),
+                                  spreadRadius: 5,
+                                  blurRadius:7,
+                                  offset: Offset(0,3),
+                                ),
+                              ],
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(5.0),
+                              child: Text('  Click here to register',
+                                style: TextStyle(
+                                  fontSize: 23.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                  fontFamily: 'DMSerifDisplay',
+                                ),
+                              ),
+                            ),
+                          ),
+                        )
+                    ),
                   ],
+
                 ),
               ),
             ],
