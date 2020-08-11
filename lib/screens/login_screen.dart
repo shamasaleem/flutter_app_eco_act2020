@@ -6,6 +6,9 @@ import 'package:flutterappecoact/services/firebase_auth_service.dart';
 import 'package:flutterappecoact/utils/styleconstants.dart';
 
 class LogIn extends StatefulWidget {
+
+  static final String id = 'login_screen';
+
   @override
   _LogInState createState() => _LogInState();
 }
@@ -22,6 +25,13 @@ class _LogInState extends State<LogIn> {
 
   String email = '';
   String password = '';
+
+  _submit(){
+    if(_loginFormKey.currentState.validate()){
+      _loginFormKey.currentState.save();
+      FirebaseAuthService.login(email, password);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -119,7 +129,7 @@ class _LogInState extends State<LogIn> {
                         ],
                       ),
                       child: GestureDetector(
-                        onTap: signInWithForm,
+                        onTap: _submit,
                         /*
                         async {
                           if(_loginFormKey.currentState.validate()){
@@ -194,7 +204,8 @@ class _LogInState extends State<LogIn> {
     );
   }
 
-  void signInWithForm() async {
+
+  /*void signInWithForm() async {
     if (_loginFormKey.currentState.validate()) {
       try {
         dynamic successful = await authService.signInWithEmailAndPassword(
@@ -208,5 +219,5 @@ class _LogInState extends State<LogIn> {
         print(e);
       }
     }
-  }
+  }*/
 }

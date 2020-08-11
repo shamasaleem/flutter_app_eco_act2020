@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterappecoact/screens/chat_feature.dart';
 import 'package:flutterappecoact/screens/choose_your_feed.dart';
@@ -13,6 +14,7 @@ import 'package:flutterappecoact/services/database_service.dart';
 import 'package:flutterappecoact/services/firebase_auth_service.dart';
 import 'package:flutterappecoact/services/user_service.dart';
 import 'package:provider/provider.dart';
+import 'models/user_data.dart';
 import 'screens/calendar.dart';
 import 'screens/create_petition.dart';
 import 'screens/donations.dart';
@@ -28,51 +30,38 @@ void main() {
   runApp(MyApp());
 }
 
+Widget _getScreenId(){
+  return StreamBuilder<FirebaseUser>(
+    stream: FirebaseAuth.instance.onAuthStateChanged,
+    builder: (BuildContext context, snapshot){
+      if(snapshot.hasData){
+        Provider.of<UserData>(context).currentUserId = snapshot.data.uid;
+        return HomePage();
+      }
+      else{
+        return LogIn();
+      }
+    },
+  );
+}
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider<FirebaseAuthService>(
-          create: (_) => FirebaseAuthService(),
-        ),
-        Provider<DatabaseService>(
-          create: (_) => DatabaseService(),
-        ),
-        ChangeNotifierProxyProvider<FirebaseAuthService, UserService>(
-          create: (_) => UserService(),
-          update: (BuildContext context, FirebaseAuthService authService,
-              UserService userService) {
-            if (authService.user == null) {
-              return userService..clearUid();
-            } else {
-              return userService..setUid(authService.user.uid);
-            }
-          },
-        ),
-      ],
-        child: MaterialApp(
-          title: 'Welcome to Flutter',
-          home: LogIn(),
-        ),
+    return ChangeNotifierProvider(
+        create: ((context) => UserData()),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Eco Act 2020',
+        home: _getScreenId(),
+        routes: {
+          LogIn.id: (context) => LogIn(),
+          SignupScreen.id: (context) => SignupScreen(),
+        },
+      ),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
 
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return SignupScreen();
-
-  }
-}
 

@@ -2,56 +2,26 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 class User{
 
-  String uid;
-  String firstName;
-  String lastName;
+  String id;
+  String name;
   String phoneNumber;
   String email;
+  String bio;
+  final String profileImageUrl;
   List<String> interests;
-  DocumentReference reference;
 
-  User({
-    this.uid,
-    this.firstName,
-    this.lastName,
-    this.phoneNumber,
-    this.email,
-    this.interests,
-  });
+  User({this.id, this.name, this.phoneNumber, this.email, this.bio, this.profileImageUrl, this.interests});
 
-  factory User.fromSnapshot(DocumentSnapshot snapshot){
-    User newUser = User.fromJson(snapshot.data);
-    newUser.reference = snapshot.reference;
-    return newUser;
-  }
-
-  factory User.fromJson(Map<String, dynamic> json) {
-    List<String> convertInterests = new List<String>();
-    List interests = json['interests'] as List;
-    if (interests != null) {
-      interests.forEach((interests) {
-        interests.add(interests.toString());
-      });
-    }
-
+  factory User.fromDoc(DocumentSnapshot doc){
     return User(
-      uid: json['uid'] as String,
-      firstName: json['firstName'] as String,
-      lastName: json['lastName'] as String,
-      phoneNumber: json['phoneNumber'] as String,
-      email: json['email'] as String,
-      interests: convertInterests,
+      id: doc.documentID,
+      name: doc['name'],
+      phoneNumber: doc['phoneNumber'],
+      email: doc['email'],
+      bio: doc['bio'] ?? '',
+      profileImageUrl: doc['profileImageUrl'],
+      interests: doc['interests'] ?? null,
     );
   }
 
-  Map<String, dynamic> toJson() => _UserToJson(this);
-
-  Map<String, dynamic> _UserToJson(User instance) => <String, dynamic>{
-    'uid': instance.uid,
-    'firstName': instance.firstName,
-    'lastName': instance.lastName,
-    'phoneNumber': instance.phoneNumber,
-    'email': instance.email,
-    'interests': instance.interests,
-  };
 }

@@ -8,6 +8,9 @@ import 'package:provider/provider.dart';
 import 'chose_your_interests.dart';
 
 class SignupScreen extends StatefulWidget {
+
+  static final String id = 'signup_screen';
+
   @override
   _SignupScreenState createState() => _SignupScreenState();
 }
@@ -24,11 +27,16 @@ class _SignupScreenState extends State<SignupScreen> {
   String phoneNumber = '';
   String password = '';
 
+  _submit(){
+    if(_signupFormKey.currentState.validate()){
+      _signupFormKey.currentState.save();
+      FirebaseAuthService.signUpUser(context, firstName + ' ' + lastName, email, phoneNumber, password);
+      Navigator.pop(context);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    authService = Provider.of<FirebaseAuthService>(context);
-    print(authService.user);
-
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
@@ -102,7 +110,8 @@ class _SignupScreenState extends State<SignupScreen> {
 
                         RaisedButton(
                           onPressed: () async{
-                            signUpWithForm();
+                            _submit();
+                            //signUpWithForm();
                           },
                           /*
                           onPressed: () async {
@@ -147,6 +156,7 @@ class _SignupScreenState extends State<SignupScreen> {
     );
   }
 
+  /*
   void signUpWithForm() async {
     if (_signupFormKey.currentState.validate()) {
       try {
@@ -177,5 +187,5 @@ class _SignupScreenState extends State<SignupScreen> {
       }
     }
   }
-
+*/
 }

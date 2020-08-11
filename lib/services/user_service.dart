@@ -15,10 +15,12 @@ class UserService extends ChangeNotifier {
 
   UserService();
 
+  /*
   setUid(String uid) {
     _uid = uid;
     startUserStream();
-  }
+  }*/
+
 
   clearUid() {
     _uid = null;
@@ -28,6 +30,7 @@ class UserService extends ChangeNotifier {
     }
   }
 
+  /*
   void startUserStream() {
     _userStream = _firestore
         .collection('users')
@@ -40,4 +43,5 @@ class UserService extends ChangeNotifier {
       }
     });
   }
+  */
 }
