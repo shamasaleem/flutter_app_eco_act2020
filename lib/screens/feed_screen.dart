@@ -44,16 +44,19 @@ class _FeedScreenState extends State<FeedScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: Text(
-          'EcoAct',
+          'EcoAct2020',
           style: TextStyle(
             color: Colors.black,
             fontSize: 35.0,
+            fontWeight: FontWeight.w600,
+            fontFamily: 'DMSerifDisplay',
           ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: ()=> Navigator.push(context, MaterialPageRoute(builder: (_) => CreatePostScreen())),
+
       ),
 
       body: RefreshIndicator(

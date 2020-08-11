@@ -122,6 +122,9 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
           'Create Post',
           style: TextStyle(
             color: Colors.black,
+            fontSize: 30.0,
+            fontWeight: FontWeight.w600,
+            fontFamily: 'DMSerifDisplay',
           ),
         ),
         actions: <Widget>[
